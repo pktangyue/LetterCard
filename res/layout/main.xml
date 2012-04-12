@@ -1,61 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
     android:id="@+id/main"
-
-    >
- 
-
-<LinearLayout
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/layout"
-    > 
-<ViewFlipper android:id="@+id/details"   
-       android:layout_width="wrap_content"     
-       android:layout_height="wrap_content"   
-       android:persistentDrawingCache="animation"   
-       android:flipInterval="1000"   
-       android:inAnimation="@anim/push_left_in"   
-		android:outAnimation="@anim/push_left_out"
-		 android:layout_weight="1">    
-</ViewFlipper>
-<motion.event.Gesture 
-    android:id="@+id/left"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    />
-<motion.event.Card
-    android:id="@+id/dot"
-    android:tag="trueDot"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-/>
-</LinearLayout>
+    android:layout_height="fill_parent" >
 
-<ImageButton
-    android:id="@+id/horn"
-    android:scaleType="fitXY"
-    android:background="@drawable/horn"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginRight="1dp"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentTop="true"
- />
-<ImageButton
-    android:id="@+id/eraser"
-    android:scaleType="fitXY"
-    android:background="@drawable/clean"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
-    android:layout_marginBottom="5dp"
-    android:layout_marginRight="1dp"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentBottom="true"
- />
+    <motion.event.Gesture
+        android:id="@+id/viewFlipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:flipInterval="1000"
+        android:persistentDrawingCache="animation" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <View
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <motion.event.Card
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="trueDot" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/horn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/horn"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:id="@+id/eraser"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/clean"
+        android:scaleType="fitXY" />
+
 </RelativeLayout>
