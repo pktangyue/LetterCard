@@ -80,10 +80,7 @@ public class Gesture extends ViewFlipper implements
 				}
 			}
 		});
-		// this.removeViewAt(0);
 		this.addView(addImageById(Config.PICNAME[i]));
-		// this.addView(addImageById(R.drawable.p2));
-		// layout.setBackgroundResource(Config.PICNAME[i]);
 		this.showNext();
 		this.removeViewAt(0);
 
